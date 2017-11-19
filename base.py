@@ -21,11 +21,11 @@ class PasswordValidator:
         pattern = re.compile(".*[0-9].*")
         return (pattern.match(password) is not None) and number_required
 
-    def validate_special_characters(self, password, special_characters):
+    def validate_special_characters_required(self, password, special_characters):
         pattern = re.compile(".*[!@#$%&*=+=-_]")
         return (pattern.match(password) is not None) and special_characters
 
-    def validate_uppercase(self, password, uppercase):
+    def validate_uppercase_required(self, password, uppercase):
         pattern = re.compile(".*[A-Z].*")
         return (pattern.match(password) is not None) and uppercase
 
